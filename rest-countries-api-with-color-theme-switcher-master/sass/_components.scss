@@ -1,0 +1,168 @@
+.controls {
+	margin-top: 7rem;
+	margin-bottom: 3rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.drop-list {
+		border-radius: 5px;
+		margin-right: 5.5rem;
+		background-color: hsl(209, 23%, 22%);
+		color: white;
+		padding: 1rem;
+		border: none;
+	}
+
+	.searchbox {
+		margin-left: 5.5rem;
+		border-radius: 5px;
+		background-color: hsl(209, 23%, 22%);
+		display: flex;
+		align-items: center;
+		padding: 1rem;
+
+		input {
+			background-color: transparent;
+			border: none;
+			caret-color: white;
+			color: white;
+
+			&::placeholder {
+				color: white;
+			}
+		}
+
+		i {
+			color: white;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+}
+
+.modal {
+	display: none;
+	z-index: 100;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 80px;
+	background-color: hsl(207, 26%, 17%);
+	align-items: center;
+	justify-content: center;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 90%;
+		gap: 100px;
+		color: white;
+
+		p {
+			font-size: 1.1rem;
+			padding: 0.3rem;
+			font-weight: bold;
+		}
+
+		span {
+			font-weight: lighter;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		min-height: 400px;
+		object-fit: cover;
+	}
+
+	.modal-imagebox {
+		flex: 0.6;
+	}
+
+	.modal-data {
+		flex: 0.6;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+
+		.modal-textleft {
+			h2 {
+				font-size: 2rem;
+				font-weight: bold;
+				margin-bottom: 1rem;
+			}
+		}
+		.modal-textright {
+			margin-right: 6rem;
+		}
+	}
+
+	.borders {
+		margin-top: 10px;
+		margin-left: 5px;
+		display: flex;
+		max-width: 250px;
+
+		flex-wrap: wrap;
+
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.border-button {
+		margin: 3px;
+		padding: 8px;
+		color: white;
+		background-color: hsl(209, 23%, 22%);
+		border-radius: 5px;
+
+		&:hover {
+			filter: brightness(120%);
+		}
+	}
+}
+
+.country-card {
+	margin: 1rem;
+	width: 250px;
+	border-radius: 5px;
+
+	background-color: hsl(209, 23%, 22%);
+	color: white;
+
+	display: flex;
+	flex-direction: column;
+
+	&__wrapper {
+		flex: 1;
+	}
+
+	&__flag {
+		width: 100%;
+		height: 170px;
+		cursor: pointer;
+		object-fit: cover;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		display: block;
+	}
+
+	&__info {
+		flex: 1;
+		padding: 2rem;
+	}
+
+	.name {
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+
+	* > p {
+		font-size: 0.9rem;
+		margin-top: 0.5rem;
+	}
+}
