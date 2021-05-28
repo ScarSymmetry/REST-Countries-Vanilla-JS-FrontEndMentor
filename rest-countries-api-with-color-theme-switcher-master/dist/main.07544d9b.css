@@ -624,8 +624,10 @@ template {
     display: flex;
     justify-content: space-between;
     align-items: baseline; }
+    .modal .modal-data * > p {
+      font-size: 1.3rem; }
     .modal .modal-data .modal-textleft h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: bold;
       margin-bottom: 1rem; }
     .modal .modal-data .modal-textright {
@@ -635,13 +637,15 @@ template {
     margin-left: 5px;
     display: flex;
     max-width: 250px;
+    font-size: 1.3rem;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start; }
   .modal .border-button {
     margin: 3px;
-    padding: 8px;
+    padding: 0.6rem;
     color: white;
+    color: var(--mode-text);
     background-color: #2b3945;
     background-color: var(--mode-elements);
     border-radius: 5px; }
@@ -673,11 +677,15 @@ template {
     flex: 1;
     padding: 2rem; }
   .country-card .name {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 700; }
   .country-card * > p {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     margin-top: 0.5rem; }
+  .country-card * > span {
+    margin-left: 5px;
+    font-weight: lighter; }
 
 html {
   box-sizing: border-box;

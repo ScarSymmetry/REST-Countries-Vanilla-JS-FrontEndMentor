@@ -1107,7 +1107,7 @@ function renderCountry(data) {
   data.forEach(function (data) {
     var countryCard = document.createElement("div");
     countryCard.classList.add("container__card");
-    countryCard.innerHTML = "\n\t\t<div class=\"country-card\" data-code=".concat(data.alpha3Code, ">\n\t\t<div class=\"country-card__wrapper\">\n\t\t<img src=").concat(data.flag, " alt=\"flag\" class=\"country-card__flag\">\n\t\t</div>\n\t\t \n\t\t\t\n            <div class=\"country-card__info\">\n                <h3 class=\"name\">").concat(data.name, "</h3>\n                <p class=\"population\">Population:").concat((0, _helpers.commaSeparated)(data.population), "</p>\n                <p class=\"region\">Region:").concat(data.region, "</p>\n                <p class=\"capital\">Capital:").concat(data.capital, "</p>\n\t\t</div>\n\t\t");
+    countryCard.innerHTML = "\n\t\t<div class=\"country-card\" data-code=".concat(data.alpha3Code, ">\n\t\t<div class=\"country-card__wrapper\">\n\t\t<img src=").concat(data.flag, " alt=\"flag\" class=\"country-card__flag\">\n\t\t</div>\n\t\t \n\t\t\t\n            <div class=\"country-card__info\">\n                <h3 class=\"name\">").concat(data.name, "</h3>\n                <p class=\"population\">Population:<span>").concat((0, _helpers.commaSeparated)(data.population), "</span></p>\n                <p class=\"region\">Region:<span>").concat(data.region, "</span></p>\n                <p class=\"capital\">Capital:<span>").concat(data.capital, "</span></p>\n\t\t</div>\n\t\t");
     container.appendChild(countryCard);
   });
 }
@@ -1177,7 +1177,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63719" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51173" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

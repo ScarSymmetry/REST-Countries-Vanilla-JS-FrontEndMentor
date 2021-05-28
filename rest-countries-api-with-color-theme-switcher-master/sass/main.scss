@@ -85,6 +85,7 @@ $dark-mode-text-white-mode-elements: hsl(0, 0%, 100%);
 		&__image {
 			background: transparent;
 			background-image: var(--btn-switch);
+
 			background-repeat: no-repeat;
 			background-position: center;
 			transition: 250ms all;

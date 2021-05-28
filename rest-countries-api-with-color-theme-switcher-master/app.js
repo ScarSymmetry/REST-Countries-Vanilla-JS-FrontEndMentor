@@ -68,11 +68,11 @@ function renderCountry(data) {
 			
             <div class="country-card__info">
                 <h3 class="name">${data.name}</h3>
-                <p class="population">Population:${commaSeparated(
+                <p class="population">Population:<span>${commaSeparated(
 									data.population
-								)}</p>
-                <p class="region">Region:${data.region}</p>
-                <p class="capital">Capital:${data.capital}</p>
+								)}</span></p>
+                <p class="region">Region:<span>${data.region}</span></p>
+                <p class="capital">Capital:<span>${data.capital}</span></p>
 		</div>
 		`;
 
