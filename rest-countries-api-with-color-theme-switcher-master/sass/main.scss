@@ -9,9 +9,10 @@ html {
 	}
 }
 body {
-	background-color: hsl(207, 26%, 17%);
+	background-color: var(--mode-background);
 	min-height: 100vw;
 	width: 100%;
+	transition: all 350ms;
 }
 
 * {
@@ -29,12 +30,27 @@ body {
 $theme-light: url(/design/icon-sun.svg);
 $theme-dark: url(/design/icon-moon.svg);
 
+$dark-mode-elements: hsl(209, 23%, 22%);
+$dark-mode-background: hsl(207, 26%, 17%);
+$light-mode-text: hsl(200, 15%, 8%);
+$light-mode-input: hsl(0, 0%, 52%);
+$light-mode-background: hsl(0, 0%, 98%);
+$dark-mode-text-white-mode-elements: hsl(0, 0%, 100%);
+
 :root {
 	--btn-switch: #{$theme-light};
+	--mode-elements: #{$dark-mode-elements};
+	--mode-background: #{$dark-mode-background};
+	--mode-text: #{$dark-mode-text-white-mode-elements};
+	--mode-input: #{$light-mode-input};
 }
 
 .light {
 	--btn-switch: #{$theme-dark};
+	--mode-elements: #{$dark-mode-text-white-mode-elements};
+	--mode-background: #{$light-mode-background};
+	--mode-text: #{$light-mode-text};
+	--mode-input: #{$light-mode-input};
 }
 
 .wrap-container {
@@ -47,10 +63,10 @@ $theme-dark: url(/design/icon-moon.svg);
 	top: 0;
 	z-index: 99;
 	min-height: 80px;
-	background-color: hsl(209, 23%, 22%);
+	background-color: var(--mode-elements);
 	display: flex;
 	align-items: center;
-	color: white;
+	color: var(--mode-text);
 	width: 100%;
 
 	.title {

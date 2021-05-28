@@ -9,8 +9,8 @@
 	.drop-list {
 		border-radius: 5px;
 		margin-right: 5.5rem;
-		background-color: hsl(209, 23%, 22%);
-		color: white;
+		background-color: var(--mode-elements);
+		color: var(--mode-text);
 		padding: 1rem;
 		border: none;
 	}
@@ -18,7 +18,7 @@
 	.searchbox {
 		margin-left: 5.5rem;
 		border-radius: 5px;
-		background-color: hsl(209, 23%, 22%);
+		background-color: var(--mode-elements);
 		display: flex;
 		align-items: center;
 		padding: 1rem;
@@ -26,16 +26,16 @@
 		input {
 			background-color: transparent;
 			border: none;
-			caret-color: white;
-			color: white;
+			caret-color: var(--mode-text);;
+			color: var(--mode-text);;
 
 			&::placeholder {
-				color: white;
+				color: var(--mode-text);;
 			}
 		}
 
 		i {
-			color: white;
+			color: var(--mode-text);;
 			padding-left: 1rem;
 			padding-right: 1rem;
 		}
@@ -49,7 +49,7 @@
 	width: 100vw;
 	height: 100vh;
 	top: 80px;
-	background-color: hsl(207, 26%, 17%);
+	background-color: var(--mode-background);
 	align-items: center;
 	justify-content: center;
 
@@ -59,7 +59,7 @@
 		justify-content: space-between;
 		width: 90%;
 		gap: 100px;
-		color: white;
+		color: var(--mode-text);
 
 		p {
 			font-size: 1.1rem;
@@ -116,7 +116,7 @@
 		margin: 3px;
 		padding: 8px;
 		color: white;
-		background-color: hsl(209, 23%, 22%);
+		background-color: var(--mode-elements);
 		border-radius: 5px;
 
 		&:hover {
@@ -130,8 +130,8 @@
 	width: 250px;
 	border-radius: 5px;
 
-	background-color: hsl(209, 23%, 22%);
-	color: white;
+	background-color: var(--mode-elements);
+	color: var(--mode-text);
 
 	display: flex;
 	flex-direction: column;

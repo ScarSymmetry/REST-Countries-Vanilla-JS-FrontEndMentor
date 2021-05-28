@@ -551,13 +551,16 @@ template {
     border-radius: 5px;
     margin-right: 5.5rem;
     background-color: #2b3945;
+    background-color: var(--mode-elements);
     color: white;
+    color: var(--mode-text);
     padding: 1rem;
     border: none; }
   .controls .searchbox {
     margin-left: 5.5rem;
     border-radius: 5px;
     background-color: #2b3945;
+    background-color: var(--mode-elements);
     display: flex;
     align-items: center;
     padding: 1rem; }
@@ -565,15 +568,21 @@ template {
       background-color: transparent;
       border: none;
       caret-color: white;
-      color: white; }
+      caret-color: var(--mode-text);
+      color: white;
+      color: var(--mode-text); }
       .controls .searchbox input::-moz-placeholder {
-        color: white; }
+        color: white;
+        color: var(--mode-text); }
       .controls .searchbox input:-ms-input-placeholder {
-        color: white; }
+        color: white;
+        color: var(--mode-text); }
       .controls .searchbox input::placeholder {
-        color: white; }
+        color: white;
+        color: var(--mode-text); }
     .controls .searchbox i {
       color: white;
+      color: var(--mode-text);
       padding-left: 1rem;
       padding-right: 1rem; }
 
@@ -585,6 +594,7 @@ template {
   height: 100vh;
   top: 80px;
   background-color: #202c37;
+  background-color: var(--mode-background);
   align-items: center;
   justify-content: center; }
   .modal__container {
@@ -594,7 +604,8 @@ template {
     width: 90%;
     grid-gap: 100px;
     gap: 100px;
-    color: white; }
+    color: white;
+    color: var(--mode-text); }
     .modal__container p {
       font-size: 1.1rem;
       padding: 0.3rem;
@@ -632,6 +643,7 @@ template {
     padding: 8px;
     color: white;
     background-color: #2b3945;
+    background-color: var(--mode-elements);
     border-radius: 5px; }
     .modal .border-button:hover {
       filter: brightness(120%); }
@@ -641,7 +653,9 @@ template {
   width: 250px;
   border-radius: 5px;
   background-color: #2b3945;
+  background-color: var(--mode-elements);
   color: white;
+  color: var(--mode-text);
   display: flex;
   flex-direction: column; }
   .country-card__wrapper {
@@ -674,8 +688,10 @@ html {
 
 body {
   background-color: #202c37;
+  background-color: var(--mode-background);
   min-height: 100vw;
-  width: 100%; }
+  width: 100%;
+  transition: all 350ms; }
 
 * {
   margin: 0;
@@ -688,10 +704,18 @@ body {
   box-sizing: inherit; }
 
 :root {
-  --btn-switch: url(/icon-sun.0bbf2d22.svg); }
+  --btn-switch: url(/icon-sun.0bbf2d22.svg);
+  --mode-elements: #2b3945;
+  --mode-background: #202c37;
+  --mode-text: white;
+  --mode-input: #858585; }
 
 .light {
-  --btn-switch: url(/icon-moon.1a0b409d.svg); }
+  --btn-switch: url(/icon-moon.1a0b409d.svg);
+  --mode-elements: white;
+  --mode-background: #fafafa;
+  --mode-text: #111517;
+  --mode-input: #858585; }
 
 .wrap-container {
   width: 90vw;
@@ -703,9 +727,11 @@ body {
   z-index: 99;
   min-height: 80px;
   background-color: #2b3945;
+  background-color: var(--mode-elements);
   display: flex;
   align-items: center;
   color: white;
+  color: var(--mode-text);
   width: 100%; }
   .header .title {
     cursor: pointer;
