@@ -1,67 +1,120 @@
 .controls {
-	margin-top: 7rem;
+	margin-top: 10rem;
 	margin-bottom: 3rem;
 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
+	@include media("<=tablet") {
+		flex-direction: column;
+		height: 120px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	.drop-list {
 		border-radius: 5px;
-		margin-right: 5.5rem;
+		margin-right: 9rem;
 		background-color: var(--mode-elements);
 		color: var(--mode-text);
-		padding: 1rem;
+		padding: 1.5rem;
 		border: none;
+		font-size: 1.3rem;
+		@include media("<=tablet") {
+			margin: 0;
+		}
 	}
 
 	.searchbox {
-		margin-left: 5.5rem;
+		@include media("<=tablet") {
+			margin-left: 0;
+		}
+		min-width: 250px;
+
+		margin-left: 9rem;
 		border-radius: 5px;
 		background-color: var(--mode-elements);
 		display: flex;
 		align-items: center;
-		padding: 1rem;
+		padding: 1.5rem;
 
 		input {
 			background-color: transparent;
 			border: none;
-			caret-color: var(--mode-text);;
-			color: var(--mode-text);;
+			caret-color: var(--mode-text);
+			color: var(--mode-text);
 
 			&::placeholder {
-				color: var(--mode-text);;
+				font-size: 1.3rem;
+				color: var(--mode-text);
 			}
 		}
 
 		i {
-			color: var(--mode-text);;
+			color: var(--mode-text);
 			padding-left: 1rem;
 			padding-right: 1rem;
 		}
 	}
 }
 
-
-
 .modal {
 	display: none;
-	z-index: 100;
+	z-index: 1000;
 	position: fixed;
 	width: 100vw;
-	height: 100vh;
+	height:100vh;
+	overflow-y: auto;
 	top: 80px;
 	background-color: var(--mode-background);
 	align-items: center;
 	justify-content: center;
+	@include media("<=1300px") {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	.back-button {
+		border-radius: 5px;
+		top: 15%;
+		left: 10%;
+		position: absolute;
+		padding: 0.8rem;
+		width: 10rem;
+		font-size: 1.5rem;
+		color: var(--mode-text);
+
+		background-color: var(--mode-elements);
+		@include media("<=1300px") {
+			top: 2%;
+			left: 38%;
+		}
+
+		> i {
+			margin-right: 0.5rem;
+			padding: 0.2rem;
+		}
+	}
 
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		width: 90%;
-		gap: 100px;
+		gap: 6rem;
 		color: var(--mode-text);
+
+		@include media("<=1600px") {
+			gap: 3rem;
+		}
+		@include media("<=1300px") {
+			flex-direction: column;
+			width: 100%;
+			margin-top: 7rem;
+		}
 
 		p {
 			font-size: 1.1rem;
@@ -75,41 +128,58 @@
 	}
 
 	&__image {
+		min-width: 420px;
 		width: 100%;
-		min-height: 400px;
+		min-height: 325px;
 		object-fit: cover;
 	}
 
 	.modal-imagebox {
-		flex: 0.6;
+		flex: 0.8;
+		@include media("<=1300px") {
+			height: 300px;
+			width: 300px;
+		}
 	}
 
 	.modal-data {
-		flex: 0.6;
+		flex: 1;
 		display: flex;
-		justify-content: space-between;
+
 		align-items: baseline;
+		@include media("<=1300px") {
+			margin-left: 20rem;
+		}
 
 		* > p {
-			font-size: 1.3rem;
+			font-size: 1.5rem;
+			padding: 1rem;
+			@include media("<=1600px") {
+				font-size: 1.2rem;
+			}
 		}
-		
 
 		.modal-textleft {
 			h2 {
-				font-size: 2.2rem;
+				letter-spacing: 5px;
+				text-indent: 7px;
+				font-size: 2.5rem;
 				font-weight: bold;
 				margin-bottom: 1rem;
+				@include media("<=1600px") {
+					font-size: 2rem;
+				}
 			}
 		}
 		.modal-textright {
+			margin-left: 3rem;
 			margin-right: 6rem;
 		}
 	}
 
 	.borders {
 		margin-top: 10px;
-		margin-left: 5px;
+		margin-left: 1rem;
 		display: flex;
 		max-width: 250px;
 		font-size: 1.3rem;
@@ -121,8 +191,8 @@
 	}
 
 	.border-button {
-		margin: 3px;
-		padding: 0.6rem;
+		margin: 0.3rem;
+		padding: 0.5rem;
 		color: var(--mode-text);
 		background-color: var(--mode-elements);
 		border-radius: 5px;

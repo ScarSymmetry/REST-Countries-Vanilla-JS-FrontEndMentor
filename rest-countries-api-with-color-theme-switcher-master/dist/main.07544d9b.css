@@ -541,29 +541,48 @@ summary {
 template {
   display: none; }
 
+/**
+*
+* Testing
+*
+**/
 .controls {
-  margin-top: 7rem;
+  margin-top: 10rem;
   margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media (max-width: 768px) {
+    .controls {
+      flex-direction: column;
+      height: 120px;
+      justify-content: space-between;
+      align-items: center; } }
   .controls .drop-list {
     border-radius: 5px;
-    margin-right: 5.5rem;
+    margin-right: 9rem;
     background-color: #2b3945;
     background-color: var(--mode-elements);
     color: white;
     color: var(--mode-text);
-    padding: 1rem;
-    border: none; }
+    padding: 1.5rem;
+    border: none;
+    font-size: 1.3rem; }
+    @media (max-width: 768px) {
+      .controls .drop-list {
+        margin: 0; } }
   .controls .searchbox {
-    margin-left: 5.5rem;
+    min-width: 250px;
+    margin-left: 9rem;
     border-radius: 5px;
     background-color: #2b3945;
     background-color: var(--mode-elements);
     display: flex;
     align-items: center;
-    padding: 1rem; }
+    padding: 1.5rem; }
+    @media (max-width: 768px) {
+      .controls .searchbox {
+        margin-left: 0; } }
     .controls .searchbox input {
       background-color: transparent;
       border: none;
@@ -572,12 +591,15 @@ template {
       color: white;
       color: var(--mode-text); }
       .controls .searchbox input::-moz-placeholder {
+        font-size: 1.3rem;
         color: white;
         color: var(--mode-text); }
       .controls .searchbox input:-ms-input-placeholder {
+        font-size: 1.3rem;
         color: white;
         color: var(--mode-text); }
       .controls .searchbox input::placeholder {
+        font-size: 1.3rem;
         color: white;
         color: var(--mode-text); }
     .controls .searchbox i {
@@ -588,24 +610,58 @@ template {
 
 .modal {
   display: none;
-  z-index: 100;
+  z-index: 1000;
   position: fixed;
   width: 100vw;
   height: 100vh;
+  overflow-y: auto;
   top: 80px;
   background-color: #202c37;
   background-color: var(--mode-background);
   align-items: center;
   justify-content: center; }
+  @media (max-width: 1300px) {
+    .modal {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start; } }
+  .modal .back-button {
+    border-radius: 5px;
+    top: 15%;
+    left: 10%;
+    position: absolute;
+    padding: 0.8rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    color: white;
+    color: var(--mode-text);
+    background-color: #2b3945;
+    background-color: var(--mode-elements); }
+    @media (max-width: 1300px) {
+      .modal .back-button {
+        top: 2%;
+        left: 38%; } }
+    .modal .back-button > i {
+      margin-right: 0.5rem;
+      padding: 0.2rem; }
   .modal__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    grid-gap: 100px;
-    gap: 100px;
+    grid-gap: 6rem;
+    gap: 6rem;
     color: white;
     color: var(--mode-text); }
+    @media (max-width: 1600px) {
+      .modal__container {
+        grid-gap: 3rem;
+        gap: 3rem; } }
+    @media (max-width: 1300px) {
+      .modal__container {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 7rem; } }
     .modal__container p {
       font-size: 1.1rem;
       padding: 0.3rem;
@@ -613,28 +669,45 @@ template {
     .modal__container span {
       font-weight: lighter; }
   .modal__image {
+    min-width: 420px;
     width: 100%;
-    min-height: 400px;
+    min-height: 325px;
     -o-object-fit: cover;
        object-fit: cover; }
   .modal .modal-imagebox {
-    flex: 0.6; }
+    flex: 0.8; }
+    @media (max-width: 1300px) {
+      .modal .modal-imagebox {
+        height: 300px;
+        width: 300px; } }
   .modal .modal-data {
-    flex: 0.6;
+    flex: 1;
     display: flex;
-    justify-content: space-between;
     align-items: baseline; }
+    @media (max-width: 1300px) {
+      .modal .modal-data {
+        margin-left: 20rem; } }
     .modal .modal-data * > p {
-      font-size: 1.3rem; }
+      font-size: 1.5rem;
+      padding: 1rem; }
+      @media (max-width: 1600px) {
+        .modal .modal-data * > p {
+          font-size: 1.2rem; } }
     .modal .modal-data .modal-textleft h2 {
-      font-size: 2.2rem;
+      letter-spacing: 5px;
+      text-indent: 7px;
+      font-size: 2.5rem;
       font-weight: bold;
       margin-bottom: 1rem; }
+      @media (max-width: 1600px) {
+        .modal .modal-data .modal-textleft h2 {
+          font-size: 2rem; } }
     .modal .modal-data .modal-textright {
+      margin-left: 3rem;
       margin-right: 6rem; }
   .modal .borders {
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 1rem;
     display: flex;
     max-width: 250px;
     font-size: 1.3rem;
@@ -642,8 +715,8 @@ template {
     align-items: center;
     justify-content: flex-start; }
   .modal .border-button {
-    margin: 3px;
-    padding: 0.6rem;
+    margin: 0.3rem;
+    padding: 0.5rem;
     color: white;
     color: var(--mode-text);
     background-color: #2b3945;
@@ -744,13 +817,20 @@ body {
   .header .title {
     cursor: pointer;
     font-size: 2rem;
-    margin-left: 5.5rem; }
+    margin-left: 9rem; }
+    @media (max-width: 768px) {
+      .header .title {
+        margin-left: 2rem; } }
   .header .toggler {
     margin-left: auto;
-    margin-right: 5.5rem;
+    margin-right: 9rem;
     display: flex;
     align-items: center;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 1.5rem; }
+    @media (max-width: 768px) {
+      .header .toggler {
+        margin-right: 2rem; } }
     .header .toggler__image {
       background: transparent;
       background-image: url(/icon-sun.0bbf2d22.svg);

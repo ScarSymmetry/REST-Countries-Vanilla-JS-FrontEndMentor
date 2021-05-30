@@ -1,4 +1,5 @@
 @import "../node_modules/scss-reset/src/scss/_reset.scss";
+@import "breakpoints";
 @import "components";
 
 html {
@@ -72,15 +73,22 @@ $dark-mode-text-white-mode-elements: hsl(0, 0%, 100%);
 	.title {
 		cursor: pointer;
 		font-size: 2rem;
-		margin-left: 5.5rem;
+		margin-left: 9rem;
+		@include media("<=tablet") {
+			margin-left: 2rem;
+		}
 	}
 
 	.toggler {
 		margin-left: auto;
-		margin-right: 5.5rem;
+		margin-right: 9rem;
 		display: flex;
 		align-items: center;
 		cursor: pointer;
+		font-size: 1.5rem;
+		@include media("<=tablet") {
+			margin-right: 2rem;
+		}
 
 		&__image {
 			background: transparent;

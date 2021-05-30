@@ -13,6 +13,7 @@ const select = document.querySelector(".drop-list");
 const title = document.querySelector(".title");
 const themeToggler = document.querySelector(".toggler");
 const togglerText = document.querySelector(".toggler__mode");
+const backButton = document.querySelector(".back-button");
 
 let searchLetter = "";
 
@@ -122,4 +123,8 @@ input.addEventListener("input", (e) => {
 		container.innerHTML = "";
 		searchFilter();
 	}
+});
+
+backButton.addEventListener("click", (e) => {
+	modal.style.display = "none";
 });
