@@ -1,6 +1,7 @@
 @import "../node_modules/scss-reset/src/scss/_reset.scss";
 @import "breakpoints";
 @import "components";
+@import "vars";
 
 html {
 	box-sizing: border-box;
@@ -10,10 +11,15 @@ html {
 	}
 }
 body {
+	font-family: 'Nunito Sans', sans-serif;
 	background-color: var(--mode-background);
 	min-height: 100vw;
 	width: 100%;
 	transition: all 350ms;
+}
+
+body.lock {
+	overflow: hidden;
 }
 
 * {
@@ -28,15 +34,7 @@ body {
 	box-sizing: inherit;
 }
 
-$theme-light: url(/design/icon-sun.svg);
-$theme-dark: url(/design/icon-moon.svg);
 
-$dark-mode-elements: hsl(209, 23%, 22%);
-$dark-mode-background: hsl(207, 26%, 17%);
-$light-mode-text: hsl(200, 15%, 8%);
-$light-mode-input: hsl(0, 0%, 52%);
-$light-mode-background: hsl(0, 0%, 98%);
-$dark-mode-text-white-mode-elements: hsl(0, 0%, 100%);
 
 :root {
 	--btn-switch: #{$theme-light};
@@ -77,6 +75,9 @@ $dark-mode-text-white-mode-elements: hsl(0, 0%, 100%);
 		@include media("<=tablet") {
 			margin-left: 2rem;
 		}
+		@include media("<=phone") {
+			font-size:1.7rem;
+		}
 	}
 
 	.toggler {
@@ -88,6 +89,9 @@ $dark-mode-text-white-mode-elements: hsl(0, 0%, 100%);
 		font-size: 1.5rem;
 		@include media("<=tablet") {
 			margin-right: 2rem;
+		}
+		@include media("<=phone") {
+			font-size:1.3rem;
 		}
 
 		&__image {
@@ -102,6 +106,12 @@ $dark-mode-text-white-mode-elements: hsl(0, 0%, 100%);
 			border: none;
 			width: 40px;
 			height: 40px;
+			@include media("<=phone") {
+			width:30px;
+			height:30px;
+			margin-right:7px;
+
+		}
 		}
 	}
 }

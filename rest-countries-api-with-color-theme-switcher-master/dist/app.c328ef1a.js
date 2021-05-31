@@ -1120,6 +1120,7 @@ themeToggler.addEventListener("click", function () {
 document.addEventListener("click", function (e) {
   if (e.target.className === "country-card__flag") {
     var testshit = e.target.parentElement.parentElement.dataset.code;
+    document.body.classList.add("lock");
     handleCountryClick(testshit);
   }
 });
@@ -1152,6 +1153,7 @@ input.addEventListener("input", function (e) {
 });
 backButton.addEventListener("click", function (e) {
   _helpers.modal.style.display = "none";
+  document.body.classList.remove("lock");
 });
 },{"regenerator-runtime/runtime":"node_modules/regenerator-runtime/runtime.js","./helpers":"helpers.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -1181,7 +1183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60551" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61953" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -91,7 +91,7 @@ themeToggler.addEventListener("click", () => {
 document.addEventListener("click", (e) => {
 	if (e.target.className === "country-card__flag") {
 		const testshit = e.target.parentElement.parentElement.dataset.code;
-
+		document.body.classList.add("lock");
 		handleCountryClick(testshit);
 	}
 });
@@ -127,4 +127,5 @@ input.addEventListener("input", (e) => {
 
 backButton.addEventListener("click", (e) => {
 	modal.style.display = "none";
+	document.body.classList.remove("lock");
 });
