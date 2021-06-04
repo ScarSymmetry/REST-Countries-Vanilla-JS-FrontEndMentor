@@ -973,6 +973,7 @@ var title = document.querySelector(".title");
 var themeToggler = document.querySelector(".toggler");
 var togglerText = document.querySelector(".toggler__mode");
 var backButton = document.querySelector(".back-button");
+var loader = document.querySelector(".loader");
 var searchLetter = "";
 var countriesData = fetch("https://restcountries.eu/rest/v2/all?fields=alpha3Code;flag;name;capital;region;population").then(function (response) {
   return response.json();
@@ -993,20 +994,21 @@ _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
         case 4:
           _context.t1 = _context.sent;
           (0, _context.t0)(_context.t1);
-          _context.next = 11;
+          loader.style.display = "none";
+          _context.next = 12;
           break;
 
-        case 8:
-          _context.prev = 8;
+        case 9:
+          _context.prev = 9;
           _context.t2 = _context["catch"](0);
           alert(_context.t2.message);
 
-        case 11:
+        case 12:
         case "end":
           return _context.stop();
       }
     }
-  }, _callee, null, [[0, 8]]);
+  }, _callee, null, [[0, 9]]);
 }))();
 
 var searchFilter = /*#__PURE__*/function () {
@@ -1183,7 +1185,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61953" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64863" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

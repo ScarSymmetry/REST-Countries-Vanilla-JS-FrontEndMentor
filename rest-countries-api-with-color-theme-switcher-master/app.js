@@ -14,6 +14,7 @@ const title = document.querySelector(".title");
 const themeToggler = document.querySelector(".toggler");
 const togglerText = document.querySelector(".toggler__mode");
 const backButton = document.querySelector(".back-button");
+const loader = document.querySelector(".loader");
 
 let searchLetter = "";
 
@@ -26,6 +27,7 @@ const countriesData = fetch(
 (async () => {
 	try {
 		renderCountry(await countriesData);
+		loader.style.display = "none";
 	} catch (e) {
 		alert(e.message);
 	}

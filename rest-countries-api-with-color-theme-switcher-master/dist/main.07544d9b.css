@@ -796,6 +796,82 @@ template {
     margin-left: 5px;
     font-weight: lighter; }
 
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px; }
+
+.loader:before,
+.loader:after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #7543d3; }
+
+.loader:before {
+  -webkit-animation: leftA 1.5s linear infinite;
+          animation: leftA 1.5s linear infinite; }
+
+.loader:after {
+  -webkit-animation: rightA 1.5s linear infinite;
+          animation: rightA 1.5s linear infinite; }
+
+@-webkit-keyframes leftA {
+  0%,
+  100% {
+    left: 100%;
+    transform: scale(0.7); }
+  25%,
+  75% {
+    left: 0;
+    transform: scale(1); }
+  50% {
+    left: 0;
+    transform: scale(1.5); } }
+
+@keyframes leftA {
+  0%,
+  100% {
+    left: 100%;
+    transform: scale(0.7); }
+  25%,
+  75% {
+    left: 0;
+    transform: scale(1); }
+  50% {
+    left: 0;
+    transform: scale(1.5); } }
+
+@-webkit-keyframes rightA {
+  0%,
+  100% {
+    right: 100%;
+    transform: scale(0.7); }
+  25%,
+  75% {
+    right: 0;
+    transform: scale(1); }
+  50% {
+    right: 0;
+    transform: scale(1.5); } }
+
+@keyframes rightA {
+  0%,
+  100% {
+    right: 100%;
+    transform: scale(0.7); }
+  25%,
+  75% {
+    right: 0;
+    transform: scale(1); }
+  50% {
+    right: 0;
+    transform: scale(1.5); } }
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
