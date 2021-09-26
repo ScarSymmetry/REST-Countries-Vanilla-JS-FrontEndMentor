@@ -18,9 +18,7 @@ const loader = document.querySelector(".loader");
 
 let searchLetter = "";
 
-const countriesData = fetch(
-	"https://restcountries.com/v3/all?fields=alpha3Code;flag;name;capital;region;population"
-)
+const countriesData = fetch("https://https://restcountries.com/v3/all")
 	.then((response) => response.json())
 	.then((data) => data);
 
