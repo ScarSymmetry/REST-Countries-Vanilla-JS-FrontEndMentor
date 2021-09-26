@@ -43,9 +43,9 @@ const searchFilter = async () => {
 
 const selectRegion = async (region) => {
 	const selectRegion = await countriesData;
-	const shit = selectRegion.filter((data) => data.region === region);
+	const region = selectRegion.filter((data) => data.continent === continent);
 	container.innerHTML = "";
-	renderCountry(shit);
+	renderCountry(region);
 };
 
 async function handleCountryClick(countryCode) {
