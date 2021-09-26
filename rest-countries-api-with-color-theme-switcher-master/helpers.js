@@ -30,7 +30,7 @@ export function openModal(countryData, allCountriesData) {
 		currencies,
 		languages,
 		borders,
-		flag,
+		flags,
 	} = countryData;
 
 	const renderBorders = allCountriesData
@@ -44,7 +44,7 @@ export function openModal(countryData, allCountriesData) {
 	
 
 	<div class="modal-imagebox">
-	<img src=${flag} alt="" class="modal__image">
+	<img src=${flags[0]} alt="" class="modal__image">
 	</div>
 	  
 	      <div class="modal-data">
