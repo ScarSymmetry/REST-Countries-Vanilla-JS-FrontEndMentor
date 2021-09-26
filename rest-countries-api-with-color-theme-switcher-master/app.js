@@ -19,7 +19,7 @@ const loader = document.querySelector(".loader");
 let searchLetter = "";
 
 const countriesData = fetch(
-	"https://restcountries.com/rest/v2/all?fields=alpha3Code;flag;name;capital;region;population"
+	"https://restcountries.com/v3/all?fields=alpha3Code;flag;name;capital;region;population"
 )
 	.then((response) => response.json())
 	.then((data) => data);
