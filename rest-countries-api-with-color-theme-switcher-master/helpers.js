@@ -4,7 +4,7 @@ export const modal = document.querySelector(".modal");
 export async function getDetailedFetch(countryCode) {
 	try {
 		const detailedFetch = await fetch(
-			`https://restcountries.eu/rest/v2/alpha/${countryCode}?fields=name;nativeName;population;region;subregion;capital;topLevelDomain;currencies;languages;borders;flag`
+			`https://restcountries.com/rest/v2/alpha/${countryCode}?fields=name;nativeName;population;region;subregion;capital;topLevelDomain;currencies;languages;borders;flag`
 		);
 		const jsonCountry = await detailedFetch.json();
 
@@ -70,7 +70,9 @@ export function openModal(countryData, allCountriesData) {
 							(language) => language.name
 						)}</span></p>
 
-            <div class="borders">Borders:${ borders.length > 0 ? renderBorders : "This country is lonely AF"}</div>
+            <div class="borders">Borders:${
+							borders.length > 0 ? renderBorders : "This country is lonely AF"
+						}</div>
         </div>
     </div>
 			
