@@ -63,7 +63,7 @@ function renderCountry(data) {
 		countryCard.innerHTML = `
 		<div class="country-card" data-code=${data.alpha3Code}>
 		<div class="country-card__wrapper">
-		<img src=${data.flag} alt="flag" class="country-card__flag">
+		<img src=${data.flags[1]} alt="flag" class="country-card__flag">
 		</div>
 		 
 			
