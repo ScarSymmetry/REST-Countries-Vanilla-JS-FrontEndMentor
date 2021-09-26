@@ -18,7 +18,7 @@ const loader = document.querySelector(".loader");
 
 let searchLetter = "";
 
-const countriesData = fetch("https://https://restcountries.com/v2/all")
+const countriesData = fetch("https://restcountries.com/v2/all")
 	.then((response) => response.json())
 	.then((data) => data);
 
