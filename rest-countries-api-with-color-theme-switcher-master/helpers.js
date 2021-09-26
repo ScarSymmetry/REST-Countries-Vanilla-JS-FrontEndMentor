@@ -4,7 +4,7 @@ export const modal = document.querySelector(".modal");
 export async function getDetailedFetch(countryCode) {
 	try {
 		const detailedFetch = await fetch(
-			`https://restcountries.eu/v3/alpha/${countryCode}?fields=name;nativeName;population;region;subregion;capital;topLevelDomain;currencies;languages;borders;flag`
+			`https://restcountries.com/v2/alpha/${countryCode}`
 		);
 		const jsonCountry = await detailedFetch.json();
 
